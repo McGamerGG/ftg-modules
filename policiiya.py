@@ -4,7 +4,7 @@ import os
 import sys
 
 
-@borg.on(events.NewMessage(pattern=r"\.pol", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.pol1", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -16,4 +16,4 @@ async def _(event):
     await asyncio.sleep(0.5)
     await event.edit("🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵\n🔴🔴🔴⬜⬜⬜🔵🔵🔵")
     await asyncio.sleep(0.5)
-    await event.edit("`**🚨🚨Никому ни с места! Прибыла полиция🚨🚨...Готовь вещички, сынок.`**")
+    await event.edit("`**🚨🚨Никому ни с места! Прибыла полиция🚨🚨...Вы арестованы, за свою красоту.`**")
